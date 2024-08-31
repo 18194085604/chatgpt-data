@@ -5557,3 +5557,243 @@ data: [DONE]
 
 24-08-31.21:39:34.153 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP (42925-byte body)
 24-08-31.21:39:34.229 [http-nio-8091-exec-5] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3-5-turbo
+24-08-31.23:09:53.351 [main            ] INFO  Application            - Starting Application using Java 1.8.0_40 on guo with PID 15524 (D:\hoduan1\chatgpt-chat\chatgpt-chat-app\target\classes started by 11148476 in D:\hoduan1\chatgpt-chat)
+24-08-31.23:09:53.353 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-08-31.23:09:53.982 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.gjy]' package. Please check your configuration.
+24-08-31.23:09:54.275 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-08-31.23:09:54.281 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-08-31.23:09:54.282 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-08-31.23:09:54.282 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-08-31.23:09:54.390 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-08-31.23:09:54.390 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1001 ms
+24-08-31.23:09:54.754 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+24-08-31.23:09:54.756 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+24-08-31.23:09:54.767 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-08-31.23:09:54.788 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$200/2008159348.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.gjy.Application.main(Application.java:12)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$$Lambda$572/1942258276.accept(Unknown Source)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:676)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 17 common frames omitted
+24-08-31.23:11:47.090 [main            ] INFO  Application            - Starting Application using Java 1.8.0_40 on guo with PID 18360 (D:\hoduan1\chatgpt-chat\chatgpt-chat-app\target\classes started by 11148476 in D:\hoduan1\chatgpt-chat)
+24-08-31.23:11:47.092 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-08-31.23:11:47.484 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.gjy]' package. Please check your configuration.
+24-08-31.23:11:47.732 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-08-31.23:11:47.737 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-08-31.23:11:47.738 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-08-31.23:11:47.738 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-08-31.23:11:47.844 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-08-31.23:11:47.844 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 727 ms
+24-08-31.23:11:48.140 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+24-08-31.23:11:48.142 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+24-08-31.23:11:48.150 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-08-31.23:11:48.165 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$215/2008159348.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.gjy.Application.main(Application.java:12)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$$Lambda$572/1946904104.accept(Unknown Source)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:676)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 17 common frames omitted
+24-08-31.23:16:25.141 [main            ] INFO  Application            - Starting Application using Java 1.8.0_40 on guo with PID 8892 (D:\hoduan1\chatgpt-chat\chatgpt-chat-app\target\classes started by 11148476 in D:\hoduan1\chatgpt-chat)
+24-08-31.23:16:25.142 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-08-31.23:16:25.491 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.gjy]' package. Please check your configuration.
+24-08-31.23:16:25.693 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-08-31.23:16:25.697 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-08-31.23:16:25.698 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-08-31.23:16:25.698 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-08-31.23:16:25.785 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-08-31.23:16:25.785 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 619 ms
+24-08-31.23:16:26.054 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+24-08-31.23:16:26.056 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+24-08-31.23:16:26.063 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-08-31.23:16:26.074 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$212/708348097.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.gjy.Application.main(Application.java:12)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$$Lambda$572/1373220972.accept(Unknown Source)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:676)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 17 common frames omitted
+24-08-31.23:17:56.622 [main            ] INFO  Application            - Starting Application using Java 1.8.0_40 on guo with PID 39656 (D:\hoduan1\chatgpt-chat\chatgpt-chat-app\target\classes started by 11148476 in D:\hoduan1\chatgpt-chat)
+24-08-31.23:17:56.624 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-08-31.23:17:57.045 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.gjy]' package. Please check your configuration.
+24-08-31.23:17:57.302 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-08-31.23:17:57.307 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-08-31.23:17:57.307 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-08-31.23:17:57.307 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-08-31.23:17:57.405 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-08-31.23:17:57.405 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 756 ms
+24-08-31.23:17:57.718 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+24-08-31.23:17:57.720 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+24-08-31.23:17:57.732 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-08-31.23:17:57.752 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$212/2008159348.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.gjy.Application.main(Application.java:12)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'chatGPTAIServiceControllerOld' method 
+com.gjy.trigger.http.ChatGPTAIServiceControllerOld#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse)
+to {POST [/api/v1/chat/completions]}: There is already 'chatGPTAIServiceController' bean method
+com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequestDTO, String, HttpServletResponse) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$$Lambda$572/1732146867.accept(Unknown Source)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:676)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 17 common frames omitted

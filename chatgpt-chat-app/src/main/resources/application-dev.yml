@@ -54,3 +54,14 @@ app:
   config:
     # 版本，方便通过接口版本升级
     api-version: v1
+
+
+# 微信公众号配置信息
+# originalid：原始ID
+# appid：个人AppID
+# token：开通接口服务自定义设置
+wx:
+  config:
+    originalid: gh_1a86ba93c073
+    appid: wxd13abd8593734aff
+    token: b8b6
