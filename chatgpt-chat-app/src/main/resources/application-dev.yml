@@ -40,3 +40,10 @@ logging:
   level:
     root: info
   config: classpath:logback-spring.xml
+
+
+chatgptglm:
+  sdk:
+    config:
+      apiHost: https://open.bigmodel.cn/
+      apiKey: 1a21f2b7c9ecb45e667d40ae498b6a6f.RmODSfeC7MitJJKG

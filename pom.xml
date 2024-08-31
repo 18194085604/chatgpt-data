@@ -99,6 +99,11 @@
                 <artifactId>commons-codec</artifactId>
                 <version>1.15</version>
             </dependency>
+            <dependency>
+                <groupId>cn.gjy</groupId>
+                <artifactId>chatglm-sdk-java</artifactId>
+                <version>2.1</version>
+            </dependency>
 
             <!-- 工程模块 -->
             <dependency>

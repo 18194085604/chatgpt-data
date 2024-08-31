@@ -26,6 +26,11 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.gjy</groupId>
+            <artifactId>chatglm-sdk-java</artifactId>
+        </dependency>
+
 
         <!-- 系统模块 -->
         <dependency>
