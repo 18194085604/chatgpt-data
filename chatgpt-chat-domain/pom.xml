@@ -38,6 +38,10 @@
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
         </dependency>
+        <dependency>
+            <groupId>cn.gjy</groupId>
+            <artifactId>chatglm-sdk-java</artifactId>
+        </dependency>
         <!-- 系统模块 -->
         <dependency>
             <groupId>com.gjy</groupId>

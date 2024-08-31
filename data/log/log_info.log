@@ -3993,3 +3993,1567 @@ data: [DONE]
 24-08-31.16:45:40.714 [OkHttp https://open.bigmodel.cn/...] INFO  GLMExecutor            - 测试结果：{"choices":[{"delta":{"content":"","role":"assistant"},"finish_reason":"stop","index":0}],"created":1725093933,"id":"202408311645339890f09d9c744606","meta":"{\"usage\":{\"completion_tokens\":212,\"prompt_tokens\":1766,\"total_tokens\":1978}}","model":"glm-3-turbo","usage":{"completion_tokens":212,"prompt_tokens":1766,"total_tokens":1978}}
 24-08-31.16:45:40.714 [OkHttp https://open.bigmodel.cn/...] INFO  GLMExecutor            - [输出结束] Tokens "[DONE]"
 24-08-31.16:46:11.708 [http-nio-8091-exec-5] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.context.request.async.AsyncRequestTimeoutException]
+24-08-31.16:52:39.746 [main            ] INFO  Application            - Starting Application using Java 1.8.0_40 on guo with PID 14928 (D:\hoduan1\chatgpt-chat\chatgpt-chat-app\target\classes started by 11148476 in D:\hoduan1\chatgpt-chat)
+24-08-31.16:52:39.747 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-08-31.16:52:40.192 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.gjy]' package. Please check your configuration.
+24-08-31.16:52:40.433 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-08-31.16:52:40.438 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-08-31.16:52:40.438 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-08-31.16:52:40.438 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-08-31.16:52:40.531 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-08-31.16:52:40.531 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 758 ms
+24-08-31.16:52:40.981 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-08-31.16:52:40.992 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-08-31.16:52:40.999 [main            ] INFO  Application            - Started Application in 1.552 seconds (JVM running for 2.162)
+24-08-31.16:52:51.336 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-08-31.16:52:51.336 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-08-31.16:52:51.336 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+24-08-31.16:52:53.312 [http-nio-8091-exec-1] INFO  ChatGPTAIServiceControllerOld - 流式问答请求开始，使用模型：gpt-3-5-turbo 请求信息：[{"content":"hello","name":"","role":"user"}]
+24-08-31.16:52:54.483 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+24-08-31.16:52:54.483 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-08-31.16:52:54.483 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 320
+24-08-31.16:52:54.483 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-08-31.16:52:54.483 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - 
+24-08-31.16:52:54.484 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - {"top_p":0.7,"stream":true,"max_tokens":1024,"temperature":0.9,"messages":[{"role":"user","content":"hello"}],"tool_choice":"auto","model":"glm-3-turbo","do_sample":true,"request_id":"xfg-1725094373318","tools":[{"type":"web_search","function":null,"retrieval":null,"web_search":{"enable":true,"search_query":"hello"}}]}
+24-08-31.16:52:54.484 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST (320-byte body)
+24-08-31.16:52:55.337 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 OK https://open.bigmodel.cn/api/paas/v4/chat/completions (852ms)
+24-08-31.16:52:55.337 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Date: Sat, 31 Aug 2024 08:52:54 GMT
+24-08-31.16:52:55.337 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: text/event-stream;charset=UTF-8
+24-08-31.16:52:55.337 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Transfer-Encoding: chunked
+24-08-31.16:52:55.337 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Connection: close
+24-08-31.16:52:55.337 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Set-Cookie: acw_tc=2f6a1fa817250943741198702e40b12c99ce9c1aae0ec017b84e2dc1767c02;path=/;HttpOnly;Max-Age=1800
+24-08-31.16:52:55.337 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - X-LOG-ID: 20240831165254a53c0ea1b3774a39
+24-08-31.16:52:55.337 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Vary: Origin
+24-08-31.16:52:55.337 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Vary: Access-Control-Request-Method
+24-08-31.16:52:55.337 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Vary: Access-Control-Request-Headers
+24-08-31.16:52:55.337 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Strict-Transport-Security: max-age=31536000; includeSubDomains
+24-08-31.16:52:56.366 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - 
+24-08-31.16:52:56.367 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"Hello"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"👋!"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" I"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"'"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"m"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" Chat"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"GL"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"M"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"（"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"智"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"谱"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"清"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"言"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"）,"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" the"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" artificial"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" intelligence"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" assistant"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":","}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" nice"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" to"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" meet"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" you"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" Feel"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" free"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" to"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" ask"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" me"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" any"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" questions"}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"20240831165254a53c0ea1b3774a39","created":1725094374,"model":"glm-3-turbo","choices":[{"index":0,"finish_reason":"stop","delta":{"role":"assistant","content":""}}],"usage":{"prompt_tokens":7,"completion_tokens":39,"total_tokens":46}}
+
+data: [DONE]
+
+
+24-08-31.16:52:56.367 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP (5544-byte body)
+24-08-31.16:53:00.236 [http-nio-8091-exec-5] INFO  ChatGPTAIServiceControllerOld - 流式问答请求完成，使用模型：gpt-3-5-turbo
+24-08-31.16:53:18.458 [http-nio-8091-exec-7] INFO  ChatGPTAIServiceControllerOld - 流式问答请求开始，使用模型：gpt-3-5-turbo 请求信息：[{"content":"晚上可以推荐吃什么吗","name":"","role":"user"}]
+24-08-31.16:53:18.464 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+24-08-31.16:53:18.464 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-08-31.16:53:18.465 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 370
+24-08-31.16:53:18.465 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-08-31.16:53:18.465 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - 
+24-08-31.16:53:18.465 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - {"top_p":0.7,"stream":true,"max_tokens":1024,"temperature":0.9,"messages":[{"role":"user","content":"晚上可以推荐吃什么吗"}],"tool_choice":"auto","model":"glm-3-turbo","do_sample":true,"request_id":"xfg-1725094398458","tools":[{"type":"web_search","function":null,"retrieval":null,"web_search":{"enable":true,"search_query":"晚上可以推荐吃什么吗"}}]}
+24-08-31.16:53:18.465 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST (370-byte body)
+24-08-31.16:53:21.856 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 OK https://open.bigmodel.cn/api/paas/v4/chat/completions (3391ms)
+24-08-31.16:53:21.856 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Date: Sat, 31 Aug 2024 08:53:21 GMT
+24-08-31.16:53:21.856 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: text/event-stream;charset=UTF-8
+24-08-31.16:53:21.856 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Transfer-Encoding: chunked
+24-08-31.16:53:21.856 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Connection: close
+24-08-31.16:53:21.856 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Set-Cookie: acw_tc=784e2c9b17250943977947077e6d4fd70b6f98a4442f3cdf8373e85fbfd8ba;path=/;HttpOnly;Max-Age=1800
+24-08-31.16:53:21.856 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - X-LOG-ID: 2024083116531787c693d5e472435b
+24-08-31.16:53:21.856 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Vary: Origin
+24-08-31.16:53:21.856 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Vary: Access-Control-Request-Method
+24-08-31.16:53:21.856 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Vary: Access-Control-Request-Headers
+24-08-31.16:53:21.856 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Strict-Transport-Security: max-age=31536000; includeSubDomains
+24-08-31.16:53:33.926 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - 
+24-08-31.16:53:33.927 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚上"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"用餐"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"时"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"选择"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"健康"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"营养"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"均衡"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"的食物"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"是非常"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"重要的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"根据"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"您"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"提供的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"参考"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"信息"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"我可以"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"为您"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"推荐"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"几"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"道"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"适合"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚上"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"吃的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"菜肴"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食物"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n\n##"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"#"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"家常"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"菜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"推荐"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n1"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" **"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"冬瓜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蒸"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"虾"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"仁"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"**"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"这道"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"菜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"清淡"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"不"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"油腻"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"虾"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"仁"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"提供了"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"优质"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蛋白"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"而"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"冬瓜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"则"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"含有"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"维生素"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"矿物质"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有助于"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"清热"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"去"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"火"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n2"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" **"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"西兰"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"花"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"炒"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"口"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蘑"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"**"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"西兰"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"花"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"口"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蘑"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"都是"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"营养"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"丰富的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蔬菜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"它们"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"富含"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"维生素"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"矿物质"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有助于"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"身体健康"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n3"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" **"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"青"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"笋"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"炒"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"木耳"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"**"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"青"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"笋"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"（"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"竹"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"笋"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"）"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"木耳"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"都是"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"很好的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"膳食纤维"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"来源"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有助于"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"消化"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"同时"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"也能"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"提供"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"必需"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"微量元素"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n\n##"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"#"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"适合"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚上"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"吃的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食物"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n1"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" **"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"燕"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"麦"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"**"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"燕"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"麦"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"含有丰富的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"膳食纤维"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"可以"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"促进"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"肠胃"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蠕动"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"帮助"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"消化"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"同时"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"还能"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"提供"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"稳定的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"能量"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n2"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" **"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"黄瓜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"**"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"黄瓜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"热量"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"低"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"含有丰富的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"维生素"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"矿物质"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"适合"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"减肥"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"期间"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"的人群"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n3"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" **"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蜂蜜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"**"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蜂蜜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"具有"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"润"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"肠"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"通"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"便"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"的效果"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"适当的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"摄入"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有助于"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"调节"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"肠胃"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"功能"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n4"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" **"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"牛奶"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"**"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"牛奶"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"含有"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"钙"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蛋白质"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有助于"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚上"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"补充"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"营养"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"但"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"应"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"避免"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"过量"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"摄入"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n5"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" **"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"土豆"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"**"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"土豆"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"是"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"碳水化合物"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"的好"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"来源"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"可以"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"提供"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"能量"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"但"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"应"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"注意"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"不要"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"过量"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食用"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n\n##"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"#"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚餐"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食谱"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"建议"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n1"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" **"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"香菇"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"炒"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"肉"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"**"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"这道"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"菜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"提供了"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蛋白质"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"香菇"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"中的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"多"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"糖"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有助于"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"增强"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"免疫力"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n2"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" **"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"红"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"米"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"孜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"然"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"炒"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"饭"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"**"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"红"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"米"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"是"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"全"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"谷"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"物的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"代表"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"加上"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"多种"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蔬菜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"肉类"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"营养"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"全面"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"孜"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"然的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"香味"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"也能"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"增加"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食欲"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n\n##"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"#"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"注意事项"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n-"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚上"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"应"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"避免"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"过于"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"油腻"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"高"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"脂肪"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和高"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"热"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"量的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食物"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"以免"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"影响"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"睡眠"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"质量"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n-"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"尽量"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"选择"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"易于"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"消化"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"吸收"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"的食物"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"减少"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"胃肠"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"负担"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n-"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"控制"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"盐"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"分"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"糖"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"分的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"摄入"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"以免"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"引起"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"水肿"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"或"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"血糖"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"波动"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n\n综上"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"所述"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"上的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"饮食"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"应以"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"清淡"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"营养"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"健康"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"为主"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"同时"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"注意"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食物"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"种"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"类的"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"多样"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"性和"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"均衡"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"性"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"希望"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"这些"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"建议"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"对"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"您"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有所"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"帮助"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"2024083116531787c693d5e472435b","created":1725094400,"model":"glm-3-turbo","choices":[{"index":0,"finish_reason":"stop","delta":{"role":"assistant","content":""}}],"usage":{"prompt_tokens":1553,"completion_tokens":426,"total_tokens":1979}}
+
+data: [DONE]
+
+
+24-08-31.16:53:33.930 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP (64726-byte body)
+24-08-31.16:53:33.965 [http-nio-8091-exec-3] INFO  ChatGPTAIServiceControllerOld - 流式问答请求完成，使用模型：gpt-3-5-turbo
+24-08-31.21:33:14.991 [main            ] INFO  Application            - Starting Application using Java 1.8.0_40 on guo with PID 20152 (D:\hoduan1\chatgpt-chat\chatgpt-chat-app\target\classes started by 11148476 in D:\hoduan1\chatgpt-chat)
+24-08-31.21:33:14.992 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-08-31.21:33:15.618 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.gjy]' package. Please check your configuration.
+24-08-31.21:33:15.924 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-08-31.21:33:15.930 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-08-31.21:33:15.931 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-08-31.21:33:15.931 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-08-31.21:33:16.037 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-08-31.21:33:16.038 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1012 ms
+24-08-31.21:33:16.572 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-08-31.21:33:16.589 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-08-31.21:33:16.597 [main            ] INFO  Application            - Started Application in 1.995 seconds (JVM running for 2.641)
+24-08-31.21:39:11.276 [http-nio-8091-exec-2] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-08-31.21:39:11.277 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-08-31.21:39:11.277 [http-nio-8091-exec-2] INFO  DispatcherServlet      - Completed initialization in 0 ms
+24-08-31.21:39:11.493 [http-nio-8091-exec-2] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3-5-turbo 请求信息：[{"content":"晚上吃什么","role":"user"}]
+24-08-31.21:39:11.504 [http-nio-8091-exec-2] ERROR [dispatcherServlet]    - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.gjy.types.exception.ChatGPTException] with root cause
+com.gjy.types.exception.ChatGPTException: null
+	at com.gjy.domain.openai.service.AbstractChatService.completions(AbstractChatService.java:23)
+	at com.gjy.trigger.http.ChatGPTAIServiceController.completionsStream(ChatGPTAIServiceController.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+24-08-31.21:39:25.019 [http-nio-8091-exec-4] INFO  ChatGPTAIServiceController - 流式问答请求开始，使用模型：gpt-3-5-turbo 请求信息：[{"content":"晚上吃什么","role":"user"}]
+24-08-31.21:39:25.054 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> POST https://open.bigmodel.cn/api/paas/v4/chat/completions
+24-08-31.21:39:25.054 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: application/json; charset=utf-8
+24-08-31.21:39:25.054 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Length: 340
+24-08-31.21:39:25.054 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Accept: text/event-stream
+24-08-31.21:39:25.054 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - 
+24-08-31.21:39:25.055 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - {"top_p":0.7,"stream":true,"max_tokens":1024,"temperature":0.9,"messages":[{"role":"user","content":"晚上吃什么"}],"tool_choice":"auto","model":"glm-3-turbo","do_sample":true,"request_id":"xfg-1725111565020","tools":[{"type":"web_search","function":null,"retrieval":null,"web_search":{"enable":true,"search_query":"晚上吃什么"}}]}
+24-08-31.21:39:25.055 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - --> END POST (340-byte body)
+24-08-31.21:39:26.727 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- 200 OK https://open.bigmodel.cn/api/paas/v4/chat/completions (1671ms)
+24-08-31.21:39:26.727 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Date: Sat, 31 Aug 2024 13:39:25 GMT
+24-08-31.21:39:26.727 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Content-Type: text/event-stream;charset=UTF-8
+24-08-31.21:39:26.727 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Transfer-Encoding: chunked
+24-08-31.21:39:26.727 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Connection: close
+24-08-31.21:39:26.727 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Set-Cookie: acw_tc=784e2caf17251115645007385e3e8125ae8c143224616b6940ffdca16b6b1a;path=/;HttpOnly;Max-Age=1800
+24-08-31.21:39:26.727 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - X-LOG-ID: 202408312139246ba37c47e003489f
+24-08-31.21:39:26.727 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Vary: Origin
+24-08-31.21:39:26.727 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Vary: Access-Control-Request-Method
+24-08-31.21:39:26.727 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Vary: Access-Control-Request-Headers
+24-08-31.21:39:26.727 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - Strict-Transport-Security: max-age=31536000; includeSubDomains
+24-08-31.21:39:34.151 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - 
+24-08-31.21:39:34.152 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚上"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"选择"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"饮食"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"时"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"应"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"考虑到"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食物"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"的健康"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"性"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"易"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"消化"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"性"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"以及"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"是否"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有助于"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"睡眠"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"以下"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"是一些"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"建议"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n\n1"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"清淡"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"易"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"消"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"化的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食物"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚上"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"可以"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"准备"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"一些"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"容易"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"消"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"化的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食物"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"如"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"小米"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"粥"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"大米"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"粥"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"或"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"牛奶"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"这些"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食物"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"能够"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"补充"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"人体"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"所需的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"营养"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"同时"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"不会"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"过分"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"刺激"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"消化"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"系统"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n\n2"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"粗"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"粮"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"粗"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"粮"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"如"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"荞"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"麦"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"面"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"玉米"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"淀粉"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"荞"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"麦"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"面包"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和高"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"粱"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"面"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"等"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"含有"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"较多的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"粗"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"纤维"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"可以"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"提供"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"丰富的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"微量元素"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"矿物质"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"并"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有助于"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"促进"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"胃肠"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蠕动"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"帮助"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"排出"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"体内"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"多余"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"油脂"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"预防"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"肥胖"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n\n3"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蔬菜"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"水果"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蔬菜"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"水果"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"是"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"健康的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚餐"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"选择"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"如"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"番茄"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"黄瓜"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"胡萝卜"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"苹果"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"香蕉"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"等"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"它们"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"富含"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"维生素"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"矿物质"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"纤维"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有助于"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"身体健康"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n\n4"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"适量的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蛋白质"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚餐"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"中"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"可以"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"包含"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"适量的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"蛋白质"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"如"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"瘦肉"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"鱼"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"豆腐"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"鸡蛋"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"等"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"它们"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"能够"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"提供"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"必需"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"氨基酸"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有助于"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"身体"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"修复"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"维持"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"肌肉"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"组织"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n\n5"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"."}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":" "}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"避免"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"刺激"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"性"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食物"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"饮料"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"："}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚上"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"应"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"避免"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食用"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"辣椒"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"咖啡"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"浓"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"茶"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"等"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"刺激"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"性"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"食物"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"饮料"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"以免"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"影响"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"睡眠"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"质量"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"\n\n总之"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"晚"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"上的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"饮食"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"应以"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"健康"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"营养"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"均衡"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"、"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"易"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"消化"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"为"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"原则"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"根据"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"个人"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"口味"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"需求"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"进行"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"选择"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"同时"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"保持"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"良好的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"饮食习惯"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"适当的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"运动"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"，"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"有助于"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"身体健康"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"和"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"睡眠"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"质量"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"的"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"提高"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"delta":{"role":"assistant","content":"。"}}]}
+
+data: {"id":"202408312139246ba37c47e003489f","created":1725111565,"model":"glm-3-turbo","choices":[{"index":0,"finish_reason":"stop","delta":{"role":"assistant","content":""}}],"usage":{"prompt_tokens":1501,"completion_tokens":279,"total_tokens":1780}}
+
+data: [DONE]
+
+
+24-08-31.21:39:34.153 [OkHttp https://open.bigmodel.cn/...] INFO  OkHttpClient           - <-- END HTTP (42925-byte body)
+24-08-31.21:39:34.229 [http-nio-8091-exec-5] INFO  AbstractChatService    - 流式问答请求完成，使用模型：gpt-3-5-turbo

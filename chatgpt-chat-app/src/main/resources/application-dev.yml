@@ -47,3 +47,10 @@ chatgptglm:
     config:
       apiHost: https://open.bigmodel.cn/
       apiKey: 1a21f2b7c9ecb45e667d40ae498b6a6f.RmODSfeC7MitJJKG
+
+
+# 应用配置
+app:
+  config:
+    # 版本，方便通过接口版本升级
+    api-version: v1
