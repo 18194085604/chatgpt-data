@@ -1,10 +1,10 @@
-package com.gjy.infrastructure.adapter.repository;
+package com.gjy.infrastructure.repository;
 
 import com.gjy.domain.openai.model.entity.UserAccountQuotaEntity;
 import com.gjy.domain.openai.model.valobj.UserAccountStatusVO;
 import com.gjy.domain.openai.repository.IOpenAiRepository;
-import com.gjy.infrastructure.adapter.dao.IUserAccountDao;
-import com.gjy.infrastructure.adapter.po.UserAccountPO;
+import com.gjy.infrastructure.dao.IUserAccountDao;
+import com.gjy.infrastructure.po.UserAccountPO;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;

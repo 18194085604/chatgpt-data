@@ -1,4 +1,4 @@
-package com.gjy.infrastructure.adapter.po;
+package com.gjy.infrastructure.po;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,6 +1,6 @@
-package com.gjy.infrastructure.adapter.dao;
+package com.gjy.infrastructure.dao;
 
-import com.gjy.infrastructure.adapter.po.UserAccountPO;
+import com.gjy.infrastructure.po.UserAccountPO;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
