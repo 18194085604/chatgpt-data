@@ -1,0 +1,62 @@
+package com.gjy.trigger.http;
+
+import com.alibaba.fastjson.JSON;
+import com.gjy.domain.auth.service.AuthService;
+import com.gjy.domain.order.model.entity.ProductEntity;
+import com.gjy.domain.order.service.IOrderService;
+import com.gjy.trigger.http.dto.SaleProductDTO;
+import com.gjy.types.common.Constants;
+import com.gjy.types.model.Response;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
+
+@Slf4j
+@RestController()
+@CrossOrigin("${app.config.cross-origin}")
+@RequestMapping("/api/${app.config.api-version}/sale/")
+public class SaleController {
+
+    @Resource
+    private AuthService authService;
+
+    @Resource
+    private IOrderService orderService;
+
+    @RequestMapping(value = "query_product_list", method = RequestMethod.GET)
+    public Response<List<SaleProductDTO>> queryProductList(@RequestHeader("Authorization") String token) {
+        // 1. Token 校验
+        boolean success = authService.checkToken(token);
+        if (!success){
+            return Response.<List<SaleProductDTO>>builder()
+                    .code(Constants.ResponseCode.TOKEN_ERROR.getCode())
+                    .info(Constants.ResponseCode.TOKEN_ERROR.getInfo()).build();
+        }
+        // 2. 查询商品列表
+        List<ProductEntity> productEntityList = orderService.queryProductList();
+        log.info("商品查询 {}", JSON.toJSONString(productEntityList));
+        List<SaleProductDTO> mallProductDTOS = new ArrayList<>();
+        for (ProductEntity productEntity : productEntityList) {
+            SaleProductDTO mallProductDTO = SaleProductDTO.builder()
+                    .productId(productEntity.getProductId())
+                    .productName(productEntity.getProductName())
+                    .productDesc(productEntity.getProductDesc())
+                    .price(productEntity.getPrice())
+                    .quota(productEntity.getQuota())
+                    .build();
+            mallProductDTOS.add(mallProductDTO);
+        }
+
+        // 3. 返回结果
+        return Response.<List<SaleProductDTO>>builder()
+                .code(Constants.ResponseCode.SUCCESS.getCode())
+                .info(Constants.ResponseCode.SUCCESS.getInfo())
+                .data(mallProductDTOS)
+                .build();
+    }
+
+
+}
