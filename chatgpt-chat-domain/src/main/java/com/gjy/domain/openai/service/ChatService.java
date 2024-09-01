@@ -7,6 +7,10 @@ import cn.bugstack.chatglm.model.Role;
 import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.gjy.domain.openai.model.aggregates.ChatProcessAggregate;
+import com.gjy.domain.openai.model.entity.RuleLogicEntity;
+import com.gjy.domain.openai.model.valobj.LogicCheckTypeVO;
+import com.gjy.domain.openai.service.rule.ILogicFilter;
+import com.gjy.domain.openai.service.rule.factory.DefaultLogicFactory;
 import okhttp3.sse.EventSource;
 import okhttp3.sse.EventSourceListener;
 import org.apache.commons.lang3.StringUtils;
@@ -15,12 +19,18 @@ import org.jetbrains.annotations.Nullable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
 
+import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class ChatService extends AbstractChatService {
+
+    @Resource
+    private DefaultLogicFactory defaultLogicFactory;
+
     @Override
     protected void doMessageResponse(ChatProcessAggregate chatProcess, ResponseBodyEmitter responseBodyEmitter) throws JsonProcessingException {
 
@@ -79,4 +89,18 @@ public class ChatService extends AbstractChatService {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    protected RuleLogicEntity<ChatProcessAggregate> doCheckLogic(ChatProcessAggregate chatProcess, String... logics) throws Exception {
+        Map<String, ILogicFilter> map = defaultLogicFactory.openLogicFilter();
+        RuleLogicEntity<ChatProcessAggregate> entity = null;
+        for (String logic : logics) {
+            ILogicFilter iLogicFilter = map.get(logic);
+            entity = iLogicFilter.filter(chatProcess);
+            if (!LogicCheckTypeVO.SUCCESS.equals(entity.getType())) return entity;
+        }
+        return entity != null ? entity : RuleLogicEntity.<ChatProcessAggregate>builder()
+                .type(LogicCheckTypeVO.SUCCESS).data(chatProcess).build();
+    }
 }
+

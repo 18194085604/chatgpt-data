@@ -6,6 +6,9 @@ import lombok.NoArgsConstructor;
 
 public class Constants {
 
+    public static final String SPLIT = ",";
+
+
     @AllArgsConstructor
     @NoArgsConstructor
     @Getter

@@ -47,6 +47,11 @@
             <groupId>com.gjy</groupId>
             <artifactId>chatgpt-chat-types</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.github.houbb</groupId>
+            <artifactId>sensitive-word</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

@@ -116,4 +116,11 @@ public abstract class AbstractAuthService implements IAuthService {
         }
 
     }
+
+
+    @Override
+    public String openid(String token) {
+        Claims claims = decode(token);
+        return claims.get("openId").toString();
+    }
 }
