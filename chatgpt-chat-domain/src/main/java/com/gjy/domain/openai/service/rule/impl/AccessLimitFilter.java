@@ -3,6 +3,7 @@ package com.gjy.domain.openai.service.rule.impl;
 import com.gjy.domain.openai.annotation.LogicStrategy;
 import com.gjy.domain.openai.model.aggregates.ChatProcessAggregate;
 import com.gjy.domain.openai.model.entity.RuleLogicEntity;
+import com.gjy.domain.openai.model.entity.UserAccountQuotaEntity;
 import com.gjy.domain.openai.model.valobj.LogicCheckTypeVO;
 import com.gjy.domain.openai.service.rule.ILogicFilter;
 import com.gjy.domain.openai.service.rule.factory.DefaultLogicFactory;
@@ -15,7 +16,7 @@ import javax.annotation.Resource;
 
 @Component
 @LogicStrategy(logicMode = DefaultLogicFactory.LogicModel.ACCESS_LIMIT)
-public class AccessLimitFilter implements ILogicFilter {
+public class AccessLimitFilter implements ILogicFilter<UserAccountQuotaEntity> {
 
     @Value("${app.config.white-list}")
     private String whiteList;
@@ -24,12 +25,18 @@ public class AccessLimitFilter implements ILogicFilter {
     private Integer limitCount;
 
     @Resource
-    private Cache<String,Integer> visitCache;
+    private Cache<String, Integer> visitCache;
 
     @Override
-    public RuleLogicEntity<ChatProcessAggregate> filter(ChatProcessAggregate chatProcess) throws Exception {
+    public RuleLogicEntity<ChatProcessAggregate> filter(ChatProcessAggregate chatProcess, UserAccountQuotaEntity data) throws Exception {
         // 1. 白名单用户直接放行
-        if (chatProcess.isWhiteList(whiteList)){
+        if (chatProcess.isWhiteList(whiteList)) {
+            return RuleLogicEntity.<ChatProcessAggregate>builder()
+                    .data(chatProcess)
+                    .type(LogicCheckTypeVO.SUCCESS).build();
+        }
+        // 个人账户不为空，不做拦截处理
+        if (data != null) {
             return RuleLogicEntity.<ChatProcessAggregate>builder()
                     .data(chatProcess)
                     .type(LogicCheckTypeVO.SUCCESS).build();
@@ -37,11 +44,11 @@ public class AccessLimitFilter implements ILogicFilter {
         String openid = chatProcess.getOpenId();
         // 2. 访问次数判断
         Integer visitCount = visitCache.get(openid, () -> 0);
-        if(visitCount < limitCount){
-            visitCache.put(openid, visitCount+1);
+        if (visitCount < limitCount) {
+            visitCache.put(openid, visitCount + 1);
             return RuleLogicEntity.<ChatProcessAggregate>builder()
-                   .data(chatProcess)
-                   .type(LogicCheckTypeVO.SUCCESS).build();
+                    .data(chatProcess)
+                    .type(LogicCheckTypeVO.SUCCESS).build();
         }
 
         return RuleLogicEntity.<ChatProcessAggregate>builder()
