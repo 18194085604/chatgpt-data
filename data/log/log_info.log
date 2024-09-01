@@ -5797,3 +5797,15 @@ com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequest
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
 	... 17 common frames omitted
+24-08-31.23:18:29.562 [main            ] INFO  Application            - Starting Application using Java 1.8.0_40 on guo with PID 12612 (D:\hoduan1\chatgpt-chat\chatgpt-chat-app\target\classes started by 11148476 in D:\hoduan1\chatgpt-chat)
+24-08-31.23:18:29.564 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-08-31.23:18:29.975 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.gjy]' package. Please check your configuration.
+24-08-31.23:18:30.209 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-08-31.23:18:30.214 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-08-31.23:18:30.214 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-08-31.23:18:30.214 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-08-31.23:18:30.307 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-08-31.23:18:30.307 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 717 ms
+24-08-31.23:18:30.777 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-08-31.23:18:30.789 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-08-31.23:18:30.795 [main            ] INFO  Application            - Started Application in 1.53 seconds (JVM running for 2.123)

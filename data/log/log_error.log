@@ -991,3 +991,4 @@ com.gjy.trigger.http.ChatGPTAIServiceController#completionsStream(ChatGPTRequest
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
 	... 17 common frames omitted
+24-08-31.23:18:29.975 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[com.gjy]' package. Please check your configuration.
