@@ -50,10 +50,11 @@ chatgptglm:
 # 应用配置
 app:
   config:
+    cross-origin: '*'
     # 版本，方便通过接口版本升级
     api-version: v1
     # 访问频次限制
-    limit-count: 10,
+    limit-count: 10
     # 白名单，不做频次拦截【微信的openai】oxfA9w8-23yvwTmo2ombz0E4zJv4
     white-list: ojbZUv18lbmriaTjcCWBYkOrSbHA
 

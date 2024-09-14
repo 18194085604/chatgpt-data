@@ -59,4 +59,55 @@ public class SaleController {
     }
 
 
+//    /**
+//     * 用户商品下单
+//     * 开始地址：http://localhost:8091/api/v1/sale/create_pay_order?productId=
+//     * 测试地址：http://apix.natapp1.cc/api/v1/sale/create_pay_order
+//     * <p>
+//     * curl -X POST \
+//     * -H "Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJveGZBOXc4LTI..." \
+//     * -H "Content-Type: application/x-www-form-urlencoded" \
+//     * -d "productId=1001" \
+//     * http://localhost:8091/api/v1/sale/create_pay_order
+//     */
+//    @RequestMapping(value = "create_pay_order", method = RequestMethod.POST)
+//    public Response<String> createParOrder(@RequestHeader("Authorization") String token, @RequestParam Integer productId) {
+//        try {
+//            // 1. Token 校验
+//            boolean success = authService.checkToken(token);
+//            if (!success) {
+//                return Response.<String>builder()
+//                        .code(Constants.ResponseCode.TOKEN_ERROR.getCode())
+//                        .info(Constants.ResponseCode.TOKEN_ERROR.getInfo())
+//                        .build();
+//            }
+//
+//            // 2. Token 解析
+//            String openid = authService.openid(token);
+//            assert null != openid;
+//            log.info("用户商品下单，根据商品ID创建支付单开始 openid:{} productId:{}", openid, productId);
+//
+//            ShopCartEntity shopCartEntity = ShopCartEntity.builder()
+//                    .openid(openid)
+//                    .productId(productId).build();
+//
+//            PayOrderEntity payOrder = orderService.createOrder(shopCartEntity);
+//            log.info("用户商品下单，根据商品ID创建支付单完成 openid: {} productId: {} orderPay: {}", openid, productId, payOrder.toString());
+//
+//            return Response.<String>builder()
+//                    .code(Constants.ResponseCode.SUCCESS.getCode())
+//                    .info(Constants.ResponseCode.SUCCESS.getInfo())
+//                    .data(payOrder.getPayUrl())
+//                    .build();
+//        } catch (Exception e) {
+//            log.error("用户商品下单，根据商品ID创建支付单失败", e);
+//            return Response.<String>builder()
+//                    .code(Constants.ResponseCode.UN_ERROR.getCode())
+//                    .info(Constants.ResponseCode.UN_ERROR.getInfo())
+//                    .build();
+//        }
+//    }
+
+
+
 }
