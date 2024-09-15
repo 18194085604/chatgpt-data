@@ -7,16 +7,29 @@ import com.gjy.domain.openai.model.entity.RuleLogicEntity;
 import com.gjy.domain.openai.model.entity.UserAccountQuotaEntity;
 import com.gjy.domain.openai.model.valobj.LogicCheckTypeVO;
 import com.gjy.domain.openai.repository.IOpenAiRepository;
+import com.gjy.domain.openai.service.channel.OpenAiGroupService;
+import com.gjy.domain.openai.service.channel.impl.ChatGLMService;
+import com.gjy.domain.openai.service.channel.impl.ChatGPTService;
 import com.gjy.domain.openai.service.rule.factory.DefaultLogicFactory;
 import com.gjy.types.common.Constants;
+import com.gjy.types.enums.OpenAiChannel;
 import com.gjy.types.exception.ChatGPTException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 @Slf4j
 public abstract class AbstractChatService implements IChatService{
+
+    private final Map<OpenAiChannel, OpenAiGroupService> openAiGroup = new HashMap<>();
+
+    public AbstractChatService(ChatGLMService chatGLMService, ChatGPTService chatGPTService) {
+        openAiGroup.put(OpenAiChannel.ChatGLM, chatGLMService);
+        openAiGroup.put(OpenAiChannel.ChatGPT, chatGPTService);
+    }
 
     @Resource
     protected OpenAiSession openAiSession;
@@ -52,7 +65,9 @@ public abstract class AbstractChatService implements IChatService{
 
         // 3.应答处理
         try {
-            this.doMessageResponse(chatProcess, emitter);
+            // 4. 应答处理 【ChatGPT、ChatGLM 策略模式】
+//            this.doMessageResponse(chatProcess, emitter);
+            openAiGroup.get(chatProcess.getChannel()).doMessageResponse(ruleLogicEntity.getData(),emitter);
         } catch (Exception e) {
             throw new ChatGPTException(Constants.ResponseCode.UN_ERROR.getCode(), Constants.ResponseCode.UN_ERROR.getInfo());
         }

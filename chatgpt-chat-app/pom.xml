@@ -86,6 +86,11 @@
             <artifactId>converter-gson</artifactId>
             <version>2.9.0</version>
         </dependency>
+        <dependency>
+            <groupId>cn.bugstack.chatgpt</groupId>
+            <artifactId>chatgpt-sdk-java</artifactId>
+        </dependency>
+
 
         <!-- 工程模块；启动依赖 trigger->domain, infrastructure-->
         <dependency>

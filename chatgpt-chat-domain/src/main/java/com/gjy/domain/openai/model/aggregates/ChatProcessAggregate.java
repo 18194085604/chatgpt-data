@@ -3,6 +3,7 @@ package com.gjy.domain.openai.model.aggregates;
 import com.gjy.domain.openai.model.entity.MessageEntity;
 import com.gjy.types.common.Constants;
 import com.gjy.types.enums.ChatGPTModel;
+import com.gjy.types.enums.OpenAiChannel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,5 +27,9 @@ public class ChatProcessAggregate {
             if (whiteOpenid.equals(openId)) return true;
         }
         return false;
+    }
+
+    public OpenAiChannel getChannel(){
+        return OpenAiChannel.getChannel(this.model);
     }
 }
