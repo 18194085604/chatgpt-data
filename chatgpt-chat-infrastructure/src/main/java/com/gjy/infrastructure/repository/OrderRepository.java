@@ -108,13 +108,14 @@ public class OrderRepository implements IOrderRepository {
     }
 
     @Override
-    public void changeOrderPaySuccess(String orderId, String transactionId, BigDecimal totalAmount, Date payTime) {
+    public Boolean changeOrderPaySuccess(String orderId, String transactionId, BigDecimal totalAmount, Date payTime) {
         OpenAIOrderPO openAIOrderPO = new OpenAIOrderPO();
         openAIOrderPO.setOrderId(orderId);
         openAIOrderPO.setPayAmount(totalAmount);
         openAIOrderPO.setPayTime(payTime);
         openAIOrderPO.setTransactionId(transactionId);
         int count = openAIOrderDao.changeOrderPaySuccess(openAIOrderPO);
+        return count == 1;
     }
 
     @Override
@@ -153,5 +154,10 @@ public class OrderRepository implements IOrderRepository {
     @Override
     public boolean changeOrderClose(String orderId) {
         return openAIOrderDao.changeOrderClose(orderId);
+    }
+
+    @Override
+    public List<String> queryNoPayNotifyOrder() {
+        return openAIOrderDao.queryNoPayNotifyOrder();
     }
 }

@@ -41,8 +41,8 @@ public class OrderService extends AbstractOrderService{
     }
 
     @Override
-    public void changeOrderPaySuccess(String orderId, String transactionId, BigDecimal totalAmount, Date payTime) {
-         orderRepository.changeOrderPaySuccess(orderId, transactionId, totalAmount, payTime);
+    public Boolean changeOrderPaySuccess(String orderId, String transactionId, BigDecimal totalAmount, Date payTime) {
+         return orderRepository.changeOrderPaySuccess(orderId, transactionId, totalAmount, payTime);
     }
 
     @Override
@@ -53,6 +53,11 @@ public class OrderService extends AbstractOrderService{
     @Override
     public boolean changeOrderClose(String orderId) {
         return orderRepository.changeOrderClose(orderId);
+    }
+
+    @Override
+    public List<String> queryNoPayNotifyOrder() {
+        return orderRepository.queryNoPayNotifyOrder();
     }
 
     @Override

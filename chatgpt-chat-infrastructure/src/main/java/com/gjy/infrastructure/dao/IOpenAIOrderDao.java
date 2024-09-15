@@ -24,4 +24,6 @@ public interface IOpenAIOrderDao {
     List<String> queryTimeoutCloseOrderList();
 
     boolean changeOrderClose(String orderId);
+
+    List<String> queryNoPayNotifyOrder();
 }

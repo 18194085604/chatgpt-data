@@ -16,7 +16,7 @@ public interface IOrderService {
 
     PayOrderEntity createOrder(ShopCartEntity shopCartEntity);
 
-    void changeOrderPaySuccess(String orderId, String transactionId, BigDecimal totalAmount, Date payTime);
+    Boolean changeOrderPaySuccess(String orderId, String transactionId, BigDecimal totalAmount, Date payTime);
 
     void deliverGoods(String orderId);
 
@@ -25,4 +25,6 @@ public interface IOrderService {
     List<String> queryTimeoutCloseOrderList();
 
     boolean changeOrderClose(String orderId);
+
+    List<String> queryNoPayNotifyOrder();
 }
