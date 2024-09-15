@@ -57,7 +57,7 @@ public abstract class AbstractOrderService implements IOrderService {
             log.info("创建订单-完成，生成支付单。openid: {} orderId: {} payUrl: {}", openid, orderEntity.getOrderId(), payOrderEntity.getPayUrl());
 
             return payOrderEntity;
-        } catch (ChatGPTException e) {
+        } catch (ChatGPTException | AlipayApiException e) {
             log.error("创建订单，已生成支付宝支付，返回 openid: {} productId: {}", shopCartEntity.getOpenId(), shopCartEntity.getProductId());
             throw new ChatGPTException(Constants.ResponseCode.UN_ERROR.getCode(), Constants.ResponseCode.UN_ERROR.getInfo());
         }

@@ -96,6 +96,12 @@
             <groupId>com.gjy</groupId>
             <artifactId>chatgpt-chat-infrastructure</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
