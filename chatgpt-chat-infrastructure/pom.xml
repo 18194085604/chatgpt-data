@@ -23,6 +23,11 @@
             <groupId>com.gjy</groupId>
             <artifactId>chatgpt-chat-domain</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
