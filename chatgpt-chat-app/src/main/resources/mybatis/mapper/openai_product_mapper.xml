@@ -22,4 +22,9 @@
         ORDER BY sort
     </select>
 
+    <select id="queryProductByProductId" parameterType="java.lang.Integer" resultMap="openAIProductMap">
+        SELECT product_id, product_name, product_desc, quota, price, is_enabled
+        FROM openai_product
+        WHERE product_id = #{productId}
+    </select>
 </mapper>

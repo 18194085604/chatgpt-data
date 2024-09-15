@@ -51,6 +51,11 @@
             <groupId>com.github.houbb</groupId>
             <artifactId>sensitive-word</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+        </dependency>
+
 
     </dependencies>
 

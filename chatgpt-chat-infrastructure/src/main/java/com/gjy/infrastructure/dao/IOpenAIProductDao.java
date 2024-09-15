@@ -1,5 +1,6 @@
 package com.gjy.infrastructure.dao;
 
+import com.gjy.infrastructure.po.OpenAIOrderPO;
 import com.gjy.infrastructure.po.OpenAIProductPO;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -8,4 +9,6 @@ import java.util.List;
 @Mapper
 public interface IOpenAIProductDao {
     List<OpenAIProductPO> queryProductList();
+
+    OpenAIProductPO queryProductByProductId(Integer productId);
 }
