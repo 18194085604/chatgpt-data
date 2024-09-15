@@ -3,6 +3,8 @@ package com.gjy.infrastructure.dao;
 import com.gjy.infrastructure.po.OpenAIOrderPO;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface IOpenAIOrderDao {
     OpenAIOrderPO queryUnpaidOrder(OpenAIOrderPO openAIOrderPOReq);
@@ -16,4 +18,10 @@ public interface IOpenAIOrderDao {
     OpenAIOrderPO queryOrder(String orderId);
 
     int updateOrderStatusDeliverGoods(String orderId);
+
+    List<String> queryReplenishmentOrder();
+
+    List<String> queryTimeoutCloseOrderList();
+
+    boolean changeOrderClose(String orderId);
 }

@@ -19,4 +19,10 @@ public interface IOrderService {
     void changeOrderPaySuccess(String orderId, String transactionId, BigDecimal totalAmount, Date payTime);
 
     void deliverGoods(String orderId);
+
+    List<String> queryReplenishmentOrder();
+
+    List<String> queryTimeoutCloseOrderList();
+
+    boolean changeOrderClose(String orderId);
 }

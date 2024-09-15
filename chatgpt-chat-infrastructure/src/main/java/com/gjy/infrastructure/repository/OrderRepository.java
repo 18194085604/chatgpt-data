@@ -139,4 +139,19 @@ public class OrderRepository implements IOrderRepository {
         }
 
     }
+
+    @Override
+    public List<String> queryTimeoutCloseOrderList() {
+        return openAIOrderDao.queryTimeoutCloseOrderList();
+    }
+
+    @Override
+    public List<String> queryReplenishmentOrder() {
+        return openAIOrderDao.queryReplenishmentOrder();
+    }
+
+    @Override
+    public boolean changeOrderClose(String orderId) {
+        return openAIOrderDao.changeOrderClose(orderId);
+    }
 }
