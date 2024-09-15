@@ -24,7 +24,7 @@ public class WeiXinBehaviorService implements IWeiXinBehaviorService {
 
 
     @Override
-    public String acceptUserBehavior(UserBehaviorMessageEntity userBehaviorMessageEntity) {
+    public synchronized String acceptUserBehavior(UserBehaviorMessageEntity userBehaviorMessageEntity) {
         // 事件类型，忽略处理
         if (MsgTypeVO.EVENT.getType().equals(userBehaviorMessageEntity.getMsgType())) {
             return "";
