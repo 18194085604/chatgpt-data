@@ -13,6 +13,7 @@ import okhttp3.sse.EventSourceListener;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
 
@@ -27,11 +28,15 @@ import java.util.stream.Collectors;
 @Service
 public class ChatGLMService implements OpenAiGroupService {
 
-    @Resource
-    protected OpenAiSession openAiSession;
+    @Autowired(required = false)
+    protected OpenAiSession chatGlMOpenAiSession;
 
     @Override
-    public void doMessageResponse(ChatProcessAggregate chatProcess, ResponseBodyEmitter responseBodyEmitter) throws JsonProcessingException {
+    public void doMessageResponse(ChatProcessAggregate chatProcess, ResponseBodyEmitter responseBodyEmitter) throws IOException {
+        if (null == chatGlMOpenAiSession) {
+            responseBodyEmitter.send("ChatGLM 通道，模型调用未开启！");
+            return;
+        }
         ChatCompletionRequest chatCompletionRequest = new ChatCompletionRequest();
         chatCompletionRequest.setModel(Model.GLM_3_5_TURBO);
         chatCompletionRequest.setIncremental(false);
@@ -58,7 +63,7 @@ public class ChatGLMService implements OpenAiGroupService {
         });
 
         try {
-            openAiSession.completions(chatCompletionRequest, new EventSourceListener() {
+            chatGlMOpenAiSession.completions(chatCompletionRequest, new EventSourceListener() {
                 @Override
                 public void onEvent(@NotNull EventSource eventSource, @Nullable String id, @Nullable String type, @NotNull String data) {
                     ChatCompletionResponse chatCompletionResponse = JSON.parseObject(data, ChatCompletionResponse.class);
