@@ -40,6 +40,16 @@ public class OrderService extends AbstractOrderService{
         return orderRepository.queryProductList();
     }
 
+    @Override
+    public void changeOrderPaySuccess(String orderId, String transactionId, BigDecimal totalAmount, Date payTime) {
+         orderRepository.changeOrderPaySuccess(orderId, transactionId, totalAmount, payTime);
+    }
+
+    @Override
+    public void deliverGoods(String orderId) {
+        orderRepository.deliverGoods(orderId);
+    }
+
 
     @Override
     protected PayOrderEntity doPrepayOrder(String openid, String orderId, String productName, BigDecimal amountTotal) throws AlipayApiException {

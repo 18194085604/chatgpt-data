@@ -50,4 +50,31 @@
         WHERE openid = #{openid} AND order_id = #{orderId}
     </update>
 
+
+    <update id="changeOrderPaySuccess" parameterType="com.gjy.infrastructure.po.OpenAIOrderPO">
+        UPDATE openai_order SET
+        order_status = 1, pay_status = 1,
+        pay_amount = #{payAmount},
+        pay_time = #{payTime},
+        transaction_id = #{transactionId},
+        update_time = now()
+        WHERE order_id = #{orderId} AND pay_time is null
+    </update>
+
+
+    <select id="queryOrder" parameterType="java.lang.String" resultMap="userAccountMap">
+        SELECT openid, product_id, product_name, product_quota, order_id,
+        order_time, order_status, total_amount, pay_type, pay_status,
+        pay_time
+        FROM openai_order
+        WHERE order_id = #{orderId}
+    </select>
+
+    <update id="updateOrderStatusDeliverGoods" parameterType="java.lang.String">
+        UPDATE openai_order SET
+        order_status = 2
+        WHERE order_id = #{orderId} AND order_status = 1
+    </update>
+
+
 </mapper>

@@ -6,6 +6,8 @@ import com.gjy.domain.order.model.entity.ProductEntity;
 import com.gjy.domain.order.model.entity.ShopCartEntity;
 import com.gjy.domain.order.model.entity.UnpaidOrderEntity;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 public interface IOrderRepository {
@@ -19,4 +21,8 @@ public interface IOrderRepository {
     void saveOrder(CreateOrderAggregate aggregate);
 
     void updateOrderPayInfo(PayOrderEntity payOrderEntity);
+
+    void changeOrderPaySuccess(String orderId, String transactionId, BigDecimal totalAmount, Date payTime);
+
+    void deliverGoods(String orderId);
 }

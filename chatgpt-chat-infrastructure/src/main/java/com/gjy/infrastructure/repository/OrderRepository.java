@@ -6,14 +6,21 @@ import com.gjy.domain.order.model.valobj.PayStatusVO;
 import com.gjy.domain.order.repository.IOrderRepository;
 import com.gjy.infrastructure.dao.IOpenAIOrderDao;
 import com.gjy.infrastructure.dao.IOpenAIProductDao;
+import com.gjy.infrastructure.dao.IUserAccountDao;
 import com.gjy.infrastructure.po.OpenAIOrderPO;
 import com.gjy.infrastructure.po.OpenAIProductPO;
+import com.gjy.infrastructure.po.UserAccountPO;
 import com.gjy.types.enums.OpenAIProductEnableModel;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 @Repository
@@ -22,6 +29,8 @@ public class OrderRepository implements IOrderRepository {
     private IOpenAIOrderDao openAIOrderDao;
     @Resource
     private IOpenAIProductDao openAIProductDao;
+    @Resource
+    private IUserAccountDao userAccountDao;
 
     @Override
     public List<ProductEntity> queryProductList() {
@@ -96,5 +105,38 @@ public class OrderRepository implements IOrderRepository {
         productEntity.setPrice(openAIProductPO.getPrice());
         productEntity.setEnable(OpenAIProductEnableModel.get(openAIProductPO.getIsEnabled()));
         return productEntity;
+    }
+
+    @Override
+    public void changeOrderPaySuccess(String orderId, String transactionId, BigDecimal totalAmount, Date payTime) {
+        OpenAIOrderPO openAIOrderPO = new OpenAIOrderPO();
+        openAIOrderPO.setOrderId(orderId);
+        openAIOrderPO.setPayAmount(totalAmount);
+        openAIOrderPO.setPayTime(payTime);
+        openAIOrderPO.setTransactionId(transactionId);
+        int count = openAIOrderDao.changeOrderPaySuccess(openAIOrderPO);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class,timeout = 350, propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT)
+    public void deliverGoods(String orderId) {
+        OpenAIOrderPO openAIOrderPO = openAIOrderDao.queryOrder(orderId);
+        // 1. 变更发货状态
+        int updateOrderStatusDeliverGoodsCount = openAIOrderDao.updateOrderStatusDeliverGoods(orderId);
+        if (1 != updateOrderStatusDeliverGoodsCount) throw new RuntimeException("updateOrderStatusDeliverGoodsCount update count is not equal 1");
+
+        // 2. 账户额度变更
+        UserAccountPO userAccountPO = userAccountDao.queryUserAccount(openAIOrderPO.getOpenid());
+        UserAccountPO userAccountPOReq = new UserAccountPO();
+        userAccountPOReq.setOpenid(openAIOrderPO.getOpenid());
+        userAccountPOReq.setTotalQuota(openAIOrderPO.getProductQuota());
+        userAccountPOReq.setSurplusQuota(openAIOrderPO.getProductQuota());
+        if (null != userAccountPO){
+            int addAccountQuotaCount = userAccountDao.addAccountQuota(userAccountPOReq);
+            if (1 != addAccountQuotaCount) throw new RuntimeException("addAccountQuotaCount update count is not equal 1");
+        } else {
+            userAccountDao.insert(userAccountPOReq);
+        }
+
     }
 }
