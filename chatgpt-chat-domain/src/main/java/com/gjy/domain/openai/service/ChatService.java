@@ -10,6 +10,8 @@ import com.gjy.domain.openai.model.aggregates.ChatProcessAggregate;
 import com.gjy.domain.openai.model.entity.RuleLogicEntity;
 import com.gjy.domain.openai.model.entity.UserAccountQuotaEntity;
 import com.gjy.domain.openai.model.valobj.LogicCheckTypeVO;
+import com.gjy.domain.openai.service.channel.impl.ChatGLMService;
+import com.gjy.domain.openai.service.channel.impl.ChatGPTService;
 import com.gjy.domain.openai.service.rule.ILogicFilter;
 import com.gjy.domain.openai.service.rule.factory.DefaultLogicFactory;
 import okhttp3.sse.EventSource;
@@ -31,6 +33,10 @@ public class ChatService extends AbstractChatService {
 
     @Resource
     private DefaultLogicFactory defaultLogicFactory;
+
+    public ChatService(ChatGLMService chatGLMService, ChatGPTService chatGPTService) {
+        super(chatGLMService, chatGPTService);
+    }
 
     @Override
     protected void doMessageResponse(ChatProcessAggregate chatProcess, ResponseBodyEmitter responseBodyEmitter) throws JsonProcessingException {
@@ -103,5 +109,6 @@ public class ChatService extends AbstractChatService {
         return entity != null ? entity : RuleLogicEntity.<ChatProcessAggregate>builder()
                 .type(LogicCheckTypeVO.SUCCESS).data(chatProcess).build();
     }
+
 }
 
