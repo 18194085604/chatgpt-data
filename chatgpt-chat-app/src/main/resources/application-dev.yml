@@ -43,6 +43,7 @@ logging:
 chatgptglm:
   sdk:
     config:
+      enabled: true
       apiHost: https://open.bigmodel.cn/
       apiKey: 1a21f2b7c9ecb45e667d40ae498b6a6f.RmODSfeC7MitJJKG
 

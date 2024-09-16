@@ -4,6 +4,7 @@ import cn.bugstack.chatglm.session.OpenAiSession;
 import cn.bugstack.chatglm.session.OpenAiSessionFactory;
 import cn.bugstack.chatglm.session.defaults.DefaultOpenAiSessionFactory;
 import okhttp3.logging.HttpLoggingInterceptor;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 public class ChatGLMSDKConfig {
 
     @Bean
+    @ConditionalOnProperty(value = "chatgptglm.sdk.config.enabled",havingValue = "true",matchIfMissing = false)
     public OpenAiSession openAiSession(ChatGLMSDKConfigProperties chatGPTSDKConfigProperties) {
         // 1.配置文件
         cn.bugstack.chatglm.session.Configuration configuration = new cn.bugstack.chatglm.session.Configuration();
