@@ -47,6 +47,11 @@
             <artifactId>alipay-sdk-java</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-javanica</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

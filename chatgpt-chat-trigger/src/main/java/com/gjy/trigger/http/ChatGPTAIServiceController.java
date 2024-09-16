@@ -7,6 +7,8 @@ import com.gjy.domain.openai.model.entity.MessageEntity;
 import com.gjy.domain.openai.service.IChatService;
 import com.gjy.trigger.http.dto.ChatGPTRequestDTO;
 import com.gjy.types.common.Constants;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyEmitter;
@@ -28,6 +30,9 @@ public class ChatGPTAIServiceController {
     private IAuthService authService;
 
     @RequestMapping(value = "chat/completions", method = RequestMethod.POST)
+    @HystrixCommand(commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5500")
+    },fallbackMethod = "completionsStreamError")
     public ResponseBodyEmitter completionsStream(@RequestBody ChatGPTRequestDTO request, @RequestHeader("Authorization") String token, HttpServletResponse response) throws Exception {
 
         log.info("流式问答请求开始，使用模型：{} 请求信息：{}", request.getModel(), JSON.toJSONString(request.getMessages()));
@@ -70,4 +75,17 @@ public class ChatGPTAIServiceController {
         // 5. 请求结果&返回
         return chatService.completions(emitter,chatProcessAggregate);
     }
+
+    public ResponseBodyEmitter completionsStreamError(@RequestBody ChatGPTRequestDTO request, @RequestHeader("Authorization") String token, HttpServletResponse response) throws IOException {
+        response.setContentType("text/event-stream");
+        response.setCharacterEncoding("UTF-8");
+        response.setHeader("Cache-Control", "no-cache");
+
+        ResponseBodyEmitter emitter = new ResponseBodyEmitter();
+        emitter.send("【错误编码】502"+ "\r\n");
+        emitter.send("【错误提示】网络超时，请重新对话尝试。");
+        emitter.complete();
+        return emitter;
+    }
+
 }
